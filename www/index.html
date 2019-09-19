@@ -1,0 +1,107 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="Content-Security-Policy" content="default-src * data: gap: content: https://ssl.gstatic.com; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
+    <script src="components/loader.js"></script>
+    <link rel="stylesheet" href="components/loader.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="components/functions.js"></script>
+</head>
+<body>
+  <button class="btn" id="btnAbreCamera">Abrir camera</button>
+  <div id="container_foto">
+    <img src="" id="imagem">  
+  </div>
+  
+  <div id="div-editar">
+    <br>
+    <table style="width:100%;">
+
+      <tr>
+        <td class="txt-range">
+          <label for="opacidade">Opacidade</label>
+          <input type="range" min="1" max="100" step="1" id="opacidade" value="100" class="range">
+        </td> 
+        <td id="nr_opacidade" style="width:20px">100</td>
+      </tr>
+
+      <tr>
+        <td class="txt-range">
+          <label for="saturacao">Saturação</label>
+          <input type="range" min="0" max="100" step="1" id="saturacao" value="100" class="range">
+        </td>
+        <td id="nr_saturacao">0</td>
+      </tr>
+
+      <tr>
+        <td class="txt-range">
+          <label for="gray">Escala de Cinza</label>
+          <input type="range" min="0" max="100" step="1" id="gray" value="0" class="range">
+        </td>
+        <td id="nr_gray">0</td>
+      </tr>
+
+      <tr>
+        <td class="txt-range">
+          <label for="blur">Desfoque</label>
+          <input type="range" min="0" max="100" step="1" id="blur" value="0" class="range">
+        </td>
+        <td id="nr_blur">0</td>
+      </tr>
+
+      <tr>
+        <td class="txt-range">
+          <label for="rotacao">rotação</label>
+          <input type="range" min="-180" max="180" step="1" id="rotacao" value="0" class="range">
+        </td>
+        <td id="nr_rotacao">0</td>
+      </tr>
+
+    </table>
+  </div>
+</body>
+<style>
+  body{
+    text-align:center;
+  }
+  #imagem{
+    display:block;
+    width:100%;
+    transition: 0.5s;
+  }
+  .btn{
+    padding:15px;
+    border-radius:10px;
+    margin:10px;
+    background: linear-gradient(to bottom , cyan, #36ff88);
+  }
+  #div-editar{
+    margin:auto;
+    width:80%;
+  }
+  input[type=range]{
+    width:100%;
+     -webkit-appearance: none;
+    appearance: none;
+    display: inline-block;
+    height: 0.2em;
+    position: relative;
+    border-radius: 5px;
+    background-color: #3071a9;
+    outline: none;
+  }
+
+  #container_foto{
+    overflow:hidden;
+  }
+
+  .txt-range{
+    text-align:left;
+  }
+  td{
+    margin-bottom:30px;
+  }
+</style>  
+</html>
